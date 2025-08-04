@@ -10,7 +10,7 @@ type PingStatus = {
 export default function Main() {
     const [status, setStatus] = useState<PingStatus | null>(null);
 
-    const backendUrl = process.env.BACKEND_URL;
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
     if (!backendUrl) {
         console.error("BACKEND_URL is not defined in the environment variables.");
         return <p>Error: BACKEND_URL is not defined.</p>;
